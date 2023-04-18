@@ -66,3 +66,22 @@ header {
 /* 
  * YOUR CSS:
  */
+
+ #about {
+display: flex;
+flex-direction: column;
+
+ }
+
+#about #aboutmockup {
+  flex: 2;
+  align-self: flex-end;
+ }
+
+ #about div {
+  display: flex;
+ }
+
+ #about p {
+  flex: 3;
+ }
