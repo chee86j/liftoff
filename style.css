@@ -60,17 +60,81 @@ section h2:after {
 
 /* Header defaults */
 header {
+  display: flex;
+  position: fixed;
+  margin: 0 4em;
+  padding: 10px;
+  width: calc(100% - 8em);
+  color: #fff;
   background-color: rgba(37, 37, 37, 0.8);
+  border-radius: 0 0 1em 1em;
+  z-index: 2;
 }
 
 /* 
  * YOUR CSS:
  */
 
- #about {
-display: flex;
-flex-direction: column;
+.logo {
+  flex-grow: 1;
+  padding-top: 0.25em;
+}
 
+.logo img{
+  width: 9em;
+}
+
+ .nav-item {
+  height: 1.5em;
+  margin: 0 1.5em 0 0;
+ }
+
+ .nav-item a {
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+.nav-item a:hover {
+  color: #202b47;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: #d3d3d3;
+}
+
+#carousel {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#carousel #carousel-text {
+  position: absolute;
+  top: 35vh;
+  color: #fff;
+  text-shadow: 2px 2px #252525;
+  z-index: 1;
+}
+
+#carousel .carousel-image {
+  position: absolute;
+  display: block;
+  margin: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+ #about {
+  padding: 20px 20px 0 20px;
+  background-color: #f1f1f1;
+ }
+
+ #about p {
+  flex: 3;
  }
 
 #about #aboutmockup {
@@ -78,10 +142,75 @@ flex-direction: column;
   align-self: flex-end;
  }
 
+ #about img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
  #about div {
   display: flex;
  }
 
- #about p {
-  flex: 3;
+ #staff {
+  
  }
+
+ .staff-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .staff-profile {
+    width: 50%;
+  }
+}
+@media (min-width: 960px) {
+  .staff-profile {
+    width: 33%;
+  }
+}
+
+ #staffers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+.staff-profile:hover {
+  color: #fff;
+  background-color: #f39c12;
+}
+
+ .staff-profile .headshot {
+  padding-top: 10px;
+  height: 5em;
+  width: 5em;
+}
+
+ .staff-name {
+  text-align: center;
+  font-size: 2em;
+}
+
+ .staff-bio {
+  width: calc(100% - 5em);
+  margin-left: 2.5em;
+  text-align: center;
+  font-style: italic;
+ }
+
+ .footer {
+  width: 100%;
+  height: 6em;
+  background-color: #252525;
+  color: #fff;
+}
